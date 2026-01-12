@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManaForge MTG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Beleren+Bold&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #0d1117;
+        background-image: 
+          linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.95)),
+          url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #e6edf3;
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+      }
+
+      /* Subtle Vignette */
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.6) 100%);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .mana-white { box-shadow: 0 0 15px rgba(248, 246, 216, 0.3); }
+      .mana-blue { box-shadow: 0 0 15px rgba(14, 104, 171, 0.3); }
+      .mana-black { box-shadow: 0 0 15px rgba(21, 11, 0, 0.3); }
+      .mana-red { box-shadow: 0 0 15px rgba(211, 32, 42, 0.3); }
+      .mana-green { box-shadow: 0 0 15px rgba(0, 115, 62, 0.3); }
+      
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(48, 54, 61, 0.8);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(72, 79, 88, 1);
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

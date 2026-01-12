@@ -1,0 +1,7 @@
+{
+  "name": "ManaForge MTG Assistant",
+  "description": "A high-performance Magic: The Gathering deck assistant for MTG Arena. Features natural language deck building, Scryfall integration, Google Search grounding for the latest meta, and Gemini Live voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
